@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GLGD</title>
+    <meta charset="utf-8">
+    <script>
+        function go(text) {
+            location.href = text;
+            target: _self;
+        }
+    </script>
+    <style>
+        body {
+            padding: 0px;
+            background-image: url('data/back.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        b {
+            font-size: 20px;
+        }
+
+        .pic {
+            opacity: 1;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .pic:hover {
+            opacity: 0.6;
+            transform: scale(1.05, 1.05);
+            z-index: 1;
+        }
+
+        .div1 {
+            margin: auto;
+            width: 1020px;
+            height: 670px;
+            text-align: center;
+        }
+
+        #pic1 {
+            width: 600px;
+            height: 410px;
+            background-image: url('data/la.jpg');
+            background-size: 100% 100%;
+        }
+
+        #pic2 {
+            margin-left: 610px;
+            width: 410px;
+            height: 200px;
+            background-image: url('data/kda.jpg');
+            background-size: 100% 100%;
+        }
+
+        #pic3 {
+            margin-left: 610px;
+            margin-top: 210px;
+            background-image: url('data/overwatch2.jpg');
+            background-size: 100% 100%;
+            width: 410px;
+            height: 200px;
+        }
+
+        #pic4 {
+            margin-top: 420px;
+            background-image: url('data/maple2_black.jpg');
+            background-size: 100% 100%;
+            width: 300px;
+            height: 250px;
+        }
+
+        #pic5 {
+            margin-top: 420px;
+            margin-left: 310px;
+            background-image: url('data/list6.jpg');
+            background-size: 100% 100%;
+            width: 290px;
+            height: 250px;
+        }
+
+        #pic6 {
+            margin-top: 420px;
+            margin-left: 610px;
+            background-image: url('data/bg.jpg');
+            background-size: 100%100%;
+            width: 410px;
+            height: 250px;
+        }
+        
+        #pic-a{
+            width: 320px;
+            height: 300px;
+            
+            background-image: url('data/list1.jpg');
+            background-size:100% 100%;
+        }
+        #pic-b{
+            margin-left: 330px;
+            width: 320px;
+            height: 300px;
+            
+            background-image: url('data/list5.jpg');
+            background-size:100% 100%;
+        }
+        #pic-c{
+            margin-left: 660px;
+            width: 320px;
+            height: 300px;
+            
+            background-image: url('data/list3.jpg');
+            background-size:100% 100%;
+        }
+        #pic-d{
+            margin-top: 310px;
+            width: 320px;
+            height: 300px;
+            
+            //border-radius: 200px 200px 200px 200px ;
+            background-image: url('data/list4.jpg');
+            background-size:100% 100%;
+        }
+        #pic-e{
+            margin-left: 330px;
+            margin-top: 310px;
+            
+            width: 320px;
+            height: 300px;
+            
+            background-image: url('data/list2.jpg');
+            background-size:100% 100%;
+        }
+        #pic-f{
+            margin-left:660px;
+            margin-top: 310px;
+             
+            width: 320px;
+            height: 300px;
+            
+            background-image: url('data/list6.jpg');
+            background-size:100% 100%;
+        }
+        
+        
+        .text {
+            width: 70%;
+            background-color: rgb(44, 77, 88, 0.5);
+            color: white;
+            
+            position: absolute;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+        .text2 {
+            width: 100%;height: 40px;
+            background-color: rgb(44, 77, 88, 0.5);
+            color: white;
+            padding-top: 10px;
+            position: absolute;
+            margin-top: 250px;
+            //border-radius: 0px 0px 200px 200px;
+        }
+
+        nav-ht {
+            z-index: 1;
+            position: fixed;
+            bottom: 110px;
+            right: 20px;
+        }
+
+        nav-ga {
+            z-index: 1;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        ._content {
+            display: inline-block;
+            width: 1000px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--------------------------오른쪽 하단 nav------------------------------>
+    <nav-ht>
+        <a href="post.html"><img src="data/ht.jpg" width="70px" height="70px"></a>
+    </nav-ht>
+    <nav-ga>
+        <a href="game.html"><img src="data/ga.jpg" width="70px" height="70px"></a>
+    </nav-ga>
+    <!------------------------------------------------------------>
+    <div id="content">
+        <div class="_content">
+
+            <div id="HT" style="margin: auto;width: 600px; height: 200px;">
+                <h2 style="font-size: 60px; text-align:center;color:white;">Hot Toping</h2>
+                <h3 style="font-size: 30px; text-align: center;color:white;">11월 Top 6</h3>
+            </div>
+
+            <div>
+            <div class="pic" id="pic1" onclick="go('content.html#direct_la')">
+                <!--새로운 경로쓰는 법--->
+                <div class="text">
+                    <b>11월 신작 로스트 아크!</b><br>겜생겜사팀
+                    <br>조회수 122만회 | 3주 전</div>
+            </div>
+
+            <div class="pic" id="pic2" onclick="go('content.html#direct_kda')">
+                <div class="text">
+                    <b>[LoL]KDA-Pop/Star</b><br>겜생겜사팀
+                    <br>조회수 100만회 | 3주 전</div>
+            </div>
+
+            <div class="pic" id="pic3" onclick="go('content.html#direct_over')">
+                <div class="text">
+                    <b>[오버워치]떠나가는 유저들!</b><br>겜생겜사팀
+                    <br>조회수 60만회 | 3주 전</div>
+            </div>
+
+            <div class="pic" id="pic4" onclick="go('content.html#direct_la')">
+                <div class="text">
+                    <b>[메이플 스토리]인싸게임!</b><br>겜생겜사팀
+                    <br>조회수 16만회 | 3주 전</div>
+
+            </div>
+
+            <div class="pic" id="pic5" onclick="go('content.html#direct_kda')">
+                <div class="text">
+                    <b>[데바데]할로윈 DLC 출시!</b><br>겜생겜사팀
+                    <br>조회수 30만회 | 3주 전</div>
+            </div>
+
+            <div class="pic" id="pic6" onclick="go('content.html#direct_over')">
+                <div class="text">
+                    <b>[배그]블루홀은 핵을 잡을 것인가</b><br>겜생겜사팀
+                    <br>조회수 29만회 | 3주 전</div>
+            </div>
+            </div>
+        </div>
+        <br clear="both">
+        <!------------------------------------------------------->
+        <div class="_content" style="margin-top:1000px">
+            <div id="GAMEA" style="margin: auto;width: 600px; height: 200px;">
+                <h2 style="font-size: 60px; text-align:center;color:white;">Game Array</h2>
+                
+            </div>
+
+            <div style="position: relative;">
+            
+            <div class="pic" id="pic-a" onclick="go('bg.html')">
+                <!--새로운 경로쓰는 법--->
+                <div class="text2">
+                    <b>배틀그라운드</b></div>
+            </div>
+
+            <div class="pic" id="pic-b" onclick="go('bg.html')">
+                <div class="text2">
+                    <b>오버워치</b></div>
+            </div>
+
+            <div class="pic" id="pic-c" onclick="go('lol.html')">
+                <div class="text2">
+                    <b>롤</b></div>
+            </div>
+
+            <div class="pic" id="pic-d" onclick="go('lol.html')">
+                <div class="text2">
+                    <b>메이플 스토리</b></div>
+            </div>
+            
+                
+            <div class="pic" id="pic-e" onclick="go('la.html')">
+                <div class="text2">
+                    <b>로스트 아크</b></div>
+            </div>
+                
+                
+            <div class="pic" id="pic-f" onclick="go('la.html')">
+                <div class="text2">
+                    <b>Day by Dead</b></div>
+            </div>
+                
+                
+            <br clear="both">
+            <footer style="margin-top:1100px"></footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

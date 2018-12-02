@@ -1,0 +1,76 @@
+﻿<html>
+
+<head>
+
+<div id="announcement" style="opacity:0.8;background-color:#ccc;position:fixed;width:100%;height:100%;top:0px;left:0px;font-size:50px;font-weight:bold; z-index:99999">
+	<div style="padding:10px; text-align:center; background-color: white; position:absolute; top:40%; left:40%; border: 5px solid black;" onclick="close_announce()">
+		<strong>공 지 사 항</strong>
+		<hr align="center" size="1" width="90%" noshade="noshade">
+		<span style="font-size:12px; text-align:center;">
+			KT 아현지사 <span style="color:red;">화재</span>로 서버 접속이 <mark>지연</mark>되고 있습니다.
+			<br>
+			복구 전까지 고이용자 여러분들께서는 양해 부탁드립니다.
+			<hr align="center" size="1" width="90%" noshade="noshade">
+			<span sytle="font-size:10px;">클릭하시면 창을 닫을 수 있습니다.</span>
+		</span>
+	</div>
+</div>
+
+<script>
+/*
+function myfunc(){
+    var var1=document.getElementById("boardimg");
+    var1.style.opacity=0.01;
+    setInterval(function(){
+        var1.style.opacity+=0.01;
+    }, 10);
+}
+  */  
+function close_announce(){
+	document.getElementById("announcement").style.display="none";
+	document.getElementById("div_right").style.opacity=0.5;
+}
+</script>
+
+<style>
+
+</style>
+<script>
+var slidecnt=0;
+
+var intro_image=["data/img/lost-ark.jpg", "data/img/pubg.jpg", "data/img/lol.jpg", "data/img/overwatch.jpg", "data/img/maplestory.jpg"];
+
+var homepage=["http:\\lostark.game.onstove.com/", "http:\\pubg.game.daum.net", "http:\\www.leagueoflegends.co.kr/", "https:\\playoverwatch.com/", "http:\\maplestory.nexon.com"];
+
+function imgslide(var1){
+	if(var1==1) slidecnt++;
+	else slidecnt--;
+	
+	if(slidecnt>4) slidecnt=0;
+	if(slidecnt<0) slidecnt=4;	
+	var sel=document.getElementById("boardimg");
+//img ver.
+//	sel.src=intro_image[slidecnt];	
+//div ver.
+	sel.style.backgroundImage="url("+intro_image[slidecnt]+")";
+}
+
+</script>
+
+</head>
+
+<body style="margin:0px; overflow:hidden;">
+<div id="boardimg" style="width:100%; height:100%; background-image:url('./data/img/lost-ark.jpg'); background-size:cover; overflow:hidden; position:absolute; "onclick="location.href=homepage[slidecnt]; myfunc()"></div>
+
+<img src="./data/img/prev.jpg" onclick="imgslide(0);" style="position:fixed; left:1px; 	bottom:40%;">
+
+
+<div id="div_right" style="width:50%; height:100%; opacity:0; margin:1px; position:absolute; top:1px; right:1px; color:red; background-color:grey; z-index:5;">
+<img src="./data/img/next.jpg" onclick="imgslide(1)" style="position:fixed; right:1px; bottom:40%; opacity:1;">
+<img src="./data/img/exit.jpg" style="position:fixed; top:15px; right:15px;" onclick="location.href='./post.html'">
+</div>
+
+
+</body>
+
+</html>
